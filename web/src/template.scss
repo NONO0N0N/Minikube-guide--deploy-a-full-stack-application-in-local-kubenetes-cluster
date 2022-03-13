@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Junge&family=Just+Another+Hand&display=swap');
+
+//breakpoint
+$phone: 550px; 
+$tablet: 768px; 
+$desktop: 1024px;
+$desktopL: 1440px;
+
+//font
+$hand-writing: 'Just Another Hand', cursive;
+$junge: 'Junge', serif;
+
+//color
+$yellow400: #FFF7CB;
+$yellow500: #F5ECB6;
+$yellow600: #FDF0A7;
+
+$yellowBG: rgba(255, 247, 203, 0.5);
+
+$grey500: #C4C4C4;
+$grey700: #333333;
+
+//shadow
+$box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+//margin
+$margin-s: 10px;
+$margin-m: 20px;
+$margin-l: 50px;
+$margin-xl: 60px;
+
+//gab
+@mixin gabRules {
+    gap: 240px;
+
+    @media (max-width: #{$desktop}) {
+        gap: 180px;
+    }
+
+    @media (max-width: #{$tablet}) {
+        gap: 100px;
+    }
+
+    @media (max-width: #{$phone}) {
+        gap: 20px;
+        flex-direction: column;
+        padding-left: $margin-l;
+    }
+}
+
+@mixin buttonPadding {
+    padding: 10px;
+}

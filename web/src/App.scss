@@ -1,0 +1,27 @@
+@import "./template";
+
+body {
+  margin: 0;
+  color: $grey700;
+  font-size: 30px;
+
+  .App {
+    font-family: $junge;
+  }
+
+  .body {
+
+    @media (max-width: #{$phone}) {
+      padding-left: $margin-l;
+    }
+  }
+
+  h3 {
+    margin: $margin-xl 0;
+    font-size: 30px;
+  }
+}
+
+
+
+

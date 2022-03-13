@@ -1,0 +1,15 @@
+@import '../../template.scss';
+
+.endpoint {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    margin-bottom: $margin-xl;
+
+    .res {
+        display: flex;
+        justify-content: center;
+        @include gabRules;
+    }
+}

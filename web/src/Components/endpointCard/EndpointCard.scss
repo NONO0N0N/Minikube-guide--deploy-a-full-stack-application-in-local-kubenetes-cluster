@@ -1,0 +1,29 @@
+@import '../../template.scss';
+
+.endpointcard {
+    background-color: $yellow400;
+    box-shadow: $box-shadow;
+
+    // height: 368px;
+    width: 360px;
+
+    div {
+        margin: $margin-l 0;
+    }
+
+    .CTA {
+        cursor: pointer;
+        background-color: $yellow500;
+        padding: 10px;
+        margin: $margin-l 80px;
+        &:hover {
+            background-color: $yellow600;
+        }
+    }
+
+    .result {
+        margin: $margin-l $margin-m;
+    }
+
+    
+}

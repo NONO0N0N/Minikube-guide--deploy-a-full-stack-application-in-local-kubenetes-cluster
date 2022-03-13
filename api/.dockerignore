@@ -1,0 +1,6 @@
+.git
+
+#ignore this local testing environment
+__pycache__
+pytest_cache
+venv

@@ -1,0 +1,12 @@
+@import '../../template.scss';
+
+.header {
+    box-shadow: $box-shadow;
+
+    .text {
+        font-family: $hand-writing;
+        font-size: 40px;
+        padding: 21px 0 21px;
+        text-align: center;
+    }
+}

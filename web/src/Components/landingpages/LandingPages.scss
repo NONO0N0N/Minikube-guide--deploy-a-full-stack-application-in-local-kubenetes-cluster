@@ -1,0 +1,42 @@
+@import '../../template.scss';
+
+.landing-pages {
+    background: url("../../Images/notebook_img.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    .yellow-background {
+        padding: 100px 0 180px;
+        background-color: $yellowBG;
+        display: flex;
+        justify-content: center;
+        @include gabRules;
+
+        .topic {
+            font-family: $hand-writing;
+            font-size: 64px;
+            opacity: 1;
+        }
+
+        div {
+            .sub-topic {
+                max-width: 290px;
+                margin-bottom: $margin-xl;
+            }
+
+            .CTA {
+                
+                a {
+                    color: $grey700;
+                    text-decoration: none;
+                    @include buttonPadding;
+                    background-color: $grey500;
+                }
+            }
+        }
+    }
+
+    
+}

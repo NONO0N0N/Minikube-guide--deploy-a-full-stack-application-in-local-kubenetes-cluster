@@ -1,0 +1,45 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: web-deployment
+spec:
+    replicas: 2
+    selector:
+        matchLabels:
+            component: web
+    template:
+        metadata:
+            labels:
+                component: web
+        spec:
+            containers:
+                -   name: api
+                    image: web:latest
+                    imagePullPolicy: IfNotPresent
+                    ports:
+                        - containerPort: 3000
+                    env: 
+                        -   name: REACT_APP_API_URL
+                            valueFrom: 
+                                configMapKeyRef:
+                                    name: app-data
+                                    key: api_url
+                        -   name: NODE_ENV
+                            valueFrom:
+                                configMapKeyRef:
+                                    name: app-data
+                                    key: environment
+
+                
+---
+apiVersion: v1
+kind: Service
+metadata:
+    name: web-service
+spec:
+    type: ClusterIP
+    selector:
+        component: web
+    ports:
+     -   port: 3000
+         targetPort: 3000
